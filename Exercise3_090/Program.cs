@@ -37,6 +37,17 @@ namespace Exercise_Linked_List_A
                 return (false);/*returns false if the node is not found*/
         }
 
+        public bool listEmpty()
+        {
+
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
+
+
+
         
 
     }
