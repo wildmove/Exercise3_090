@@ -77,7 +77,21 @@ namespace Exercise_Linked_List_A
                 Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + " " + LAST.next.name);
         }
 
-        
+        public void addNode()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\nEnter rhe roll number of the student: ");
+            nim = Convert.ToInt32(Console.ReadLine);
+            Console.Write("\nEnter the name of the student");
+            nm = Console.ReadLine();
+
+            Node newNode = new Node();
+            newNode.rollNumber = nim;
+            newNode.name = nm;
+        }
+
+
 
         static void Main(string[] args)
         {
