@@ -89,6 +89,16 @@ namespace Exercise_Linked_List_A
             Node newNode = new Node();
             newNode.rollNumber = nim;
             newNode.name = nm;
+
+            
+        }
+
+        public void delNode()
+        {
+            Node previous, current;
+            previous = null;
+            current = LAST.next;
+            
         }
 
 
