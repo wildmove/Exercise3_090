@@ -79,26 +79,41 @@ namespace Exercise_Linked_List_A
 
         public void addNode()
         {
-            int nim;
-            string nm;
-            Console.WriteLine("\nEnter rhe roll number of the student: ");
-            nim = Convert.ToInt32(Console.ReadLine);
-            Console.Write("\nEnter the name of the student");
-            nm = Console.ReadLine();
+
 
             Node newNode = new Node();
-            newNode.rollNumber = nim;
-            newNode.name = nm;
+            LAST = newNode;
+            LAST.next = LAST;
 
-            
+
+
         }
 
         public void delNode()
         {
+
+
             Node previous, current;
-            previous = null;
+
+            //if only node in the list
+            if (LAST != null)
+            {
+                LAST = null;
+                return;
+            }
+
             current = LAST.next;
-            
+            //delete first node
+            if (LAST.next == LAST)
+            {
+                LAST = null;
+                return;
+            }
+
+            LAST.next = LAST.next.next;
+
+
+
         }
 
 
@@ -156,6 +171,7 @@ namespace Exercise_Linked_List_A
                             {
                                 obj.addNode();
                             }
+                            break;
                         case '5':
                             {
                                 obj.delNode();
