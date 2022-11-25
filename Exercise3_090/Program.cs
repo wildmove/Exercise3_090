@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic; 
 using System.Linq; 
 using System.Text; 
@@ -12,6 +13,9 @@ namespace Exercise_Linked_List_A
         public int rollNumber;
         public string name;
         public Node next;
+        private int x;
+
+      
     }
 
     class CircularList
@@ -73,6 +77,8 @@ namespace Exercise_Linked_List_A
                 Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + " " + LAST.next.name);
         }
 
+        
+
         static void Main(string[] args)
         {
             CircularList obj = new CircularList();
@@ -84,8 +90,10 @@ namespace Exercise_Linked_List_A
                     Console.WriteLine("1. View all the records in the list");
                     Console.WriteLine("2. Search for a record in the list");
                     Console.WriteLine("3. Display the first record in the list");
-                    Console.WriteLine("4. Exit\n");
-                    Console.Write("Enter your choice (1-4): ");
+                    Console.WriteLine("4. Add record");
+                    Console.WriteLine("5. Delete record");
+                    Console.WriteLine("6. Exit\n");
+                    Console.Write("Enter your choice (1-6): ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {
@@ -121,6 +129,15 @@ namespace Exercise_Linked_List_A
                             }
                             break;
                         case '4':
+                            {
+                                obj.addNode();
+                            }
+                        case '5':
+                            {
+                                obj.delNode();
+                            }
+                            break;
+                        case '6':
                             return;
                         default:
                             {
